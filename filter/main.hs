@@ -15,4 +15,11 @@ l4 = filter(\x -> x > 25) l1
 l5 = filter(\x -> mod x 4 == 0) l1
 -- l5 = [20, 40]
 -- pegando números divisiveis por 4
-main = print l5
+
+people = [("Matheus", 23), ("Cristiano", 13)]
+is_adult person = (snd person) > 18
+adult_people = filter is_adult people
+-- [("Matheus", 23)]
+
+main = print adult_people
+

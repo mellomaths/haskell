@@ -5,7 +5,7 @@
 -- foldl itera da esquerda para direita
 
 l1 = [10, 7, 4, 14, 1, 6]
-v1 = foldr (+) 0 l1
+v1 = foldl (+) 0 l1
 -- v1 = 42 = 0+6+1+14+4+7+10
 -- zero é o valor inicial da operação, no caso da soma é utilizado por ser neutro servindo como acumulador inicial
 
@@ -22,4 +22,10 @@ v4 = foldr (\x y -> (show x) ++ y) "" l1
 v5 = foldr (++) "" (map show l1)
 -- v5 = "10741416"
 
-main = print v5
+v6 = foldr (-) 0 [1,2,3,4]
+-- -2
+
+v7 = foldl (-) 0 [1,2,3,4]
+-- -10
+
+main = print v6
