@@ -17,4 +17,8 @@ l5 = map(\x -> x*2) l1
 -- l5 = [20, 40, 60, 80]
 -- com o \ (lambda) criamos uma função anônima
 
-main = print l5
+people = [("Sam", "Newman"), ("Chris", "Richarson"), ("Martin", "Fowler")]
+give_fullname person = (fst person) ++ " " ++ (snd person)
+people_fullname = map give_fullname people
+
+main = print people_fullname
