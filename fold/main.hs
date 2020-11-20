@@ -28,4 +28,9 @@ v6 = foldr (-) 0 [1,2,3,4]
 v7 = foldl (-) 0 [1,2,3,4]
 -- -10
 
-main = print v6
+accounts = [1000, 6546.4, 542.5]
+sum_accounts acc1 acc2 = acc1 + acc2
+total_in_bank = foldr sum_accounts 0 accounts
+-- 8088.9
+
+main = print total_in_bank

@@ -17,4 +17,4 @@ l5 = map(\x -> x*2) l1
 -- l5 = [20, 40, 60, 80]
 -- com o \ (lambda) criamos uma função anônima
 
-main = l5
+main = print l5
