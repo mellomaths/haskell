@@ -1,4 +1,4 @@
-custom_length :: ([x] -> Int)
+custom_length :: ([a] -> Int)
 -- this function is declared for receiving array of any type and returning an Int
 custom_length l = 
     case l of
