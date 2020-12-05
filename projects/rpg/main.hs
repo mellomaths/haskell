@@ -43,6 +43,24 @@ magia classe =
         "Sacerdote" -> 95
         "Gnomo" -> 30
 
+reza :: (String -> Int)
+reza classe =
+    case classe of
+        "Gigante" -> 0
+        "Guerreiro" -> 0
+        "Mago" -> 1
+        "Sacerdote" -> 1
+        "Gnomo" -> 0
+
+luta :: (String -> Int)
+luta classe =
+    case classe of
+        "Gigante" -> 1
+        "Guerreiro" -> 1
+        "Mago" -> 1
+        "Sacerdote" -> 0
+        "Gnomo" -> 1
+
 propriedades :: (String -> [Int])
 propriedades classe =
     case classe of
