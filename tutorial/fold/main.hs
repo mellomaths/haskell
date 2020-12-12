@@ -1,5 +1,6 @@
 -- Higher-Order Function "fold" (reduce)
 -- Fold is a higher-order function because it receives another function as an argument.
+-- fold :: (a -> b -> b) -> b -> [a] -> b
 
 -- foldr iterates from the right to the left of the list
 -- foldl iterates from the left to the right of the list
