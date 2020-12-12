@@ -17,10 +17,20 @@ l5 = filter(\x -> mod x 4 == 0) l1
 -- l5 = [20, 40]
 -- pegando números divisiveis por 4
 
-people = [("Matheus", 23), ("Cristiano", 13)]
-is_adult person = (snd person) > 18
-adult_people = filter is_adult people
--- [("Matheus", 23)]
+type Person = (String, Int, String)
+name (x,_,_) = x
+age (_,x,_) = x
+sex (_,_,x) = x
 
-main = print adult_people
+people = [("Matheus", 23, "M"), ("Cristiana", 13, "F"), ("Messi", 27, "M")]
+
+is_adult person = (age person) > 18
+adult_people = filter is_adult people
+
+is_female person = (sex person) == "F"
+is_male person = (sex person) == "M"
+females = filter is_female people
+
+
+main = print females
 
