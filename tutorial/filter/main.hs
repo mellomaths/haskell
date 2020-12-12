@@ -5,8 +5,9 @@ l1 = [10, 20, 30, 40]
 l2 = filter(>25) l1
 -- l2 = [30, 40]
 
-maior_25 x = x > 25
-l3 = filter maior_25 l1
+greater_than_25 :: Int -> Bool
+greater_than_25 x = x > 25
+l3 = filter greater_than_25 l1
 -- l3 = [30, 40]
 
 l4 = filter(\x -> x > 25) l1
