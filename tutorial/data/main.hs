@@ -50,3 +50,12 @@ s = Student 5 6.8
 -- so a Shape can be a Circle and also a Rectangle
 data Shape = Circle Float Float Float | Rectangle Float Float Float Float 
 
+-- so we can define the type of List
+data ListOfInt = Node Int List | Empty
+-- which means that a list of integers, if not empty, 
+-- is formed by a integer and the rest of the list 
+-- and we can do that recursively.
+
+l :: ListOfInt
+l = Node 10 (Node 20 (Node 30 Empty))
+-- l = 10 : 20 : 30 : []
