@@ -50,6 +50,16 @@ s = Student 5 6.8
 -- so a Shape can be a Circle and also a Rectangle
 data Shape = Circle Float Float Float | Rectangle Float Float Float Float 
 
+-- we can define inner properties name to facility the reading
+data Person = Person {  firstname :: String,
+                        lastname :: String,
+                        age :: Int,
+                        height :: Int,
+                        phonenumber :: String
+                     }
+
+guy = Person { firstname="Matheus", lastname="Mello", age=23, height=184, phonenumber="+552173872781" }
+
 -- so we can define the type of List
 data ListOfInt = Node Int ListOfInt | Empty
 -- which means that a list of integers, if not empty, 
