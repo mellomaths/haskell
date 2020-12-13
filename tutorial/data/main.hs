@@ -51,7 +51,7 @@ s = Student 5 6.8
 data Shape = Circle Float Float Float | Rectangle Float Float Float Float 
 
 -- so we can define the type of List
-data ListOfInt = Node Int List | Empty
+data ListOfInt = Node Int ListOfInt | Empty
 -- which means that a list of integers, if not empty, 
 -- is formed by a integer and the rest of the list 
 -- and we can do that recursively.
