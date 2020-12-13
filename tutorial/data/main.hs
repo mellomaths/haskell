@@ -113,4 +113,8 @@ t = Branch ( Branch ( Branch Leaf 1 Leaf)
                     6
                     ( Branch Leaf 7 Leaf)) -- right subtree
 
+-- implementing a function to return the lenght (size) of the tree
+lengthtree :: Tree a -> Int
+lengthtree Leaf = 0
+lengthtree (Branch lefttree _ righttree) = 1 + lengthtree lefttree + lengthtree righttree
 
