@@ -59,3 +59,10 @@ data ListOfInt = Node Int ListOfInt | Empty
 l :: ListOfInt
 l = Node 10 (Node 20 (Node 30 Empty))
 -- l = 10 : 20 : 30 : []
+
+
+-- we can also define a Parametric type of List
+-- so that the list can have any type.
+data List a = Node a (List a) | Empty
+l :: List Int
+l = Node 10 (Node 20 (Node 30 Empty))
