@@ -1,3 +1,4 @@
+-- Using "data" we can create our own data types. 
 -- we can use "data" like we use "struct" in C
 -- data (type name) = (constructor name) (properties types)
 
@@ -46,4 +47,6 @@ s = Student 5 6.8
 -- struct Member s = { STUDENT, { 5, 6.8 } };
 
 
+-- so a Shape can be a Circle and also a Rectangle
+data Shape = Circle Float Float Float | Rectangle Float Float Float Float 
 
