@@ -94,3 +94,23 @@ map f l =
         Node x remainder -> Node (f x) (map f remainder)
         -- else applies function to the current x, and map the rest
 
+
+-- We can have complex data structures like tree implemented like this
+data Tree a = Branch (Tree a) a (Tree a) | Leaf
+-- recreating this tree
+--       4
+--    /     \
+--   2       6 
+--  / \     / \
+-- 1   3   5   7
+
+t :: Tree Int
+t = Branch ( Branch ( Branch Leaf 1 Leaf)
+                    2
+                    ( Branch Leaf 3 Leaf)) -- left subtree
+            4 -- root
+            (Branch ( Branch Leaf 5 Leaf)
+                    6
+                    ( Branch Leaf 7 Leaf)) -- right subtree
+
+
