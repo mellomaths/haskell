@@ -1,25 +1,28 @@
-type Character = (Int, Int, Status)
-type Status = (Int, Int, Int)
+data Status = Status {  agility :: Int,
+                        power :: Int,
+                        sourcery :: Int
+                    } deriving (Show)
 
-height :: Character -> Int
-height (h, _, _) = h
+data Character =  Character {   height :: Int,
+                                age :: Int,
+                                status :: Status
+                            } deriving (Show)
 
-age :: Character -> Int
-age (_, a, _) = a
 
-agility :: Character -> Int
-agility (_, _, (a, _, _)) = a
+giant :: Character
+giant = Character { height=932, age=156, status=Status { agility=14, power=99, sourcery=0 } }  
 
-power :: Character -> Int
-power (_, _, (_, p, _)) = p
+warrior :: Character
+warrior = Character { height=187, age=28, status=Status { agility=70, power=78, sourcery=0 } }
 
-sourcery :: Character -> Int
-sourcery (_, _, (_, _, s)) = s
+mage :: Character
+mage = Character { height=156, age=54, status=Status { agility=44, power=24, sourcery=78 } }
 
-giant = (8322, 156, (14, 99, 0))
-warrior = (187, 28, (70, 78, 0))
-mage = (156, 54, (44, 24, 78))
-priest = (210, 87, (25, 13, 95))
-gnome = (80, 92, (92, 40, 30))
+priest :: Character
+priest = Character { height=210, age=87, status=Status { agility=25, power=13, sourcery=95 } }
 
-main = print (age giant)
+gnome :: Character
+gnome = Character { height=60, age=92, status=Status { agility=92, power=40, sourcery=30 } }
+
+main = print giant
+
