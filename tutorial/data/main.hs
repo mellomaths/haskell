@@ -71,8 +71,18 @@ l = Node 10 (Node 20 (Node 30 Empty))
 -- l = 10 : 20 : 30 : []
 
 
+-- defining a version of "map" to this List data type that we created
+mapInt :: (Int -> Int) -> ListOfInt -> ListOfInt
+mapInt afunction intlist = 
+    case intlist of
+        Empty -> Empty -- if empty, return empty []
+        Node x remainder -> Node (afunction x) (mapInt afunction remainder)
+        -- else applies function to the current x, and map the rest
+
+
 -- we can also define a Parametric type of List
 -- so that the list can have any type.
 data List a = Node a (List a) | Empty
 l :: List Int
 l = Node 10 (Node 20 (Node 30 Empty))
+
